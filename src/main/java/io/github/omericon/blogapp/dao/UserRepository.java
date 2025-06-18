@@ -11,7 +11,8 @@ import java.util.UUID;
 @Repository
 public interface UserRepository {
     public String saveUser(User user);
-    public Optional<User> getUser(String id);
+    public Optional<User> getUserById(String id);
     public List<User> getAllUsers() throws Exception;
+    public boolean deleteUser(String id);
 
 }

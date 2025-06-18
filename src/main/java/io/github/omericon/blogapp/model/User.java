@@ -4,15 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.UUID;
 
 public class User {
-    private final String id;
+    private String id;
     private String username;
     private String email;
     private String password;
     private String bio;
 
-
     public User(@JsonProperty("username") String username, @JsonProperty("email") String email, @JsonProperty("password") String password) {
-        this.id = UUID.randomUUID().toString();
         this.username = username;
         this.email = email;
         this.password = password;
@@ -23,6 +21,9 @@ public class User {
         this.username = username;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
     public void setEmail(String email) {
         this.email = email;
     }
